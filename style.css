@@ -1,4 +1,36 @@
+@font-face {
+    font-family: funnel;
+    src: url(fonts/FunnelDisplay-Regular.ttf) format(truetype);
+}
+
 * {
     padding: 0;
     margin: 0;
+}
+
+body {
+    font-family: funnel;
+    background-color: #EAE0D5;
+}
+
+header {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    background-color: #22333B;
+}
+
+header div {
+    text-align: center;
+    flex-grow: 1;
+}
+
+a img {
+    display: inline;
+    width: 40px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
