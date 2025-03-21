@@ -43,6 +43,7 @@ a img {
 
 #add-book {
     font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 1rem 2em;
     display: flex;
     align-items: center;
@@ -57,44 +58,10 @@ a img {
     transition-duration: .2s;
 }
 
-#arrow {
-    position: absolute;
-    right: 0;
-    width: 30px;
-    height: 100%;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 #add-book:hover {
     background-color: rgb(77, 77, 77);
     transition-duration: .2s;
 }
-
-#add-book:hover #arrow {
-    animation: slide-right .6s ease-out both;
-}
-
-@keyframes slide-right {
-    0% {
-        transform: translateX(-10px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-  
-#add-book:active {
-transform: translate(1px , 1px);
-transition-duration: .2s;
-}
-  
-
 
 .content {
     padding: 2em;
