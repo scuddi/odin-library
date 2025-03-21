@@ -6,8 +6,6 @@ function Book(title, author, pages, read) {
     this.read = read;
 };
 
-// const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, "not read");
-
 const myLibrary = [];
 
 function addBookToLibrary(title, author, pages, read) {
@@ -17,6 +15,10 @@ function addBookToLibrary(title, author, pages, read) {
 
 function displayBooks() {
     for (let i = 0; i < myLibrary.length; i++) {
-        // Here comes all the text for the display.
+        //...
     }
-}
+};
+
+addBookToLibrary("The Phoenix Project", "Gene Kim", 345, "read");
+addBookToLibrary("The Abolition of Man", "C. S. Lewis", 48, "not read");
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, "not read");
