@@ -1,4 +1,5 @@
 const buttonExpandForm = document.querySelector("#expand-form");
+const buttonSubmitForm = document.querySelector("#submit");
 
 function Book(title, author, pages, read) {
     this.id = crypto.randomUUID();
@@ -12,6 +13,10 @@ const myLibrary = [];
 
 function expandForm() {
     document.getElementById("form").className = "form-expanded";
+};
+
+function submitButton() { // THIS IS JUST FOR STARTERS - HAS TO BE ADDED TO ADDBOOKTOLIBRARY
+    document.getElementById("form").className ="form-hidden";
 };
 
 function addBookToLibrary(title, author, pages, read) {
@@ -61,3 +66,4 @@ addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, "not read");
 displayBooks(myLibrary);
 
 buttonExpandForm.addEventListener("click", expandForm);
+buttonSubmitForm.addEventListener("click", submitButton);
