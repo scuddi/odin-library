@@ -33,18 +33,13 @@ submitForm.addEventListener("submit", (e) =>{
     newBook.id = crypto.randomUUID();
     myLibrary.push(newBook);
 
-    // displayBooks(); //PROBLEM: Bestehende Bücher werden dann nochmal hinzugefügt
+    displayBooks(); //PROBLEM: Bestehende Bücher werden dann nochmal hinzugefügt
     
     document.getElementById("form").className ="form-hidden";
 
-} ) // THIS IS JUST FOR STARTERS - HAS TO BE ADDED TO ADDBOOKTOLIBRARY
+} )
 
 function addBookToLibrary(title, author, pages, read) {
-
-    // let title = document.getElementById("form-title").value;
-    // let author = document.getElementById("form-author").value;
-    // let pages = document.getElementById("form-pages").value;
-    // let read = document.getElementById("form-status").value;
 
     const newBook = new Book(title, author, pages, read);
     newBook.id = crypto.randomUUID();
@@ -54,8 +49,10 @@ function addBookToLibrary(title, author, pages, read) {
 };
 
 function displayBooks() {
+    content = document.getElementById("content");
+    content.innerHTML = "";
+
     for (let i = 0; i < myLibrary.length; i++) {
-        content = document.getElementById("content");
 
         const bookCard = document.createElement("div");
         bookCard.classList.add("book-card");
