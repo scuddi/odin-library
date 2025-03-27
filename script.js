@@ -36,6 +36,7 @@ submitForm.addEventListener("submit", (e) =>{
     displayBooks(); //PROBLEM: Bestehende Bücher werden dann nochmal hinzugefügt
     
     document.getElementById("form").className ="form-hidden";
+    document.getElementById("form").reset();
 
 } )
 
