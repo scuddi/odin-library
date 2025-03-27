@@ -1,5 +1,6 @@
 // Queryselector for Document Elements
 
+const submitForm = document.querySelector("form");
 const buttonExpandForm = document.querySelector("#expand-form");
 const buttonSubmitForm = document.querySelector("#submit");
 
@@ -19,18 +20,37 @@ function expandForm() {
     document.getElementById("form").className = "form-expanded";
 };
 
-function submitButton() { // THIS IS JUST FOR STARTERS - HAS TO BE ADDED TO ADDBOOKTOLIBRARY
-    document.getElementById("form").className ="form-hidden";
-};
+submitForm.addEventListener("submit", (e) =>{
 
-function addBookToLibrary(title, author, pages, read) {
+    e.preventDefault();
+
+    let title = document.getElementById("form-title").value;
+    let author = document.getElementById("form-author").value;
+    let pages = document.getElementById("form-pages").value;
+    let read = document.getElementById("form-status").value;
+    
     const newBook = new Book(title, author, pages, read);
     newBook.id = crypto.randomUUID();
     myLibrary.push(newBook);
 
-    // Expand form
-
+    displayBooks();
     
+    document.getElementById("form").className ="form-hidden";
+
+} ) // THIS IS JUST FOR STARTERS - HAS TO BE ADDED TO ADDBOOKTOLIBRARY
+
+function addBookToLibrary(title, author, pages, read) {
+
+    // let title = document.getElementById("form-title").value;
+    // let author = document.getElementById("form-author").value;
+    // let pages = document.getElementById("form-pages").value;
+    // let read = document.getElementById("form-status").value;
+
+    const newBook = new Book(title, author, pages, read);
+    newBook.id = crypto.randomUUID();
+    myLibrary.push(newBook);
+
+    document.getElementById("form").className ="form-hidden";
 };
 
 function displayBooks() {
@@ -70,4 +90,3 @@ addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, "not read");
 displayBooks(myLibrary);
 
 buttonExpandForm.addEventListener("click", expandForm);
-buttonSubmitForm.addEventListener("click", submitButton);
