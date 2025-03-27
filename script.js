@@ -1,4 +1,4 @@
-const buttonExpandForm = document.querySelector("#add-book");
+const buttonExpandForm = document.querySelector("#expand-form");
 
 function Book(title, author, pages, read) {
     this.id = crypto.randomUUID();
