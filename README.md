@@ -6,3 +6,7 @@ In this project the aim is to build a library to practise and use JavaScript Pro
 ## Check out my live demo:
 
 **Under Construction**
+
+### To Do:
+
+- [ ] Smooth animation for expanding and contracting the input form
