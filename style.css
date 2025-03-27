@@ -53,7 +53,7 @@ form label {
 }
 
 form input {
-    margin-right: 3em;
+    margin-right: 2em;
     border-radius: 5px;
     border: none;
 }
@@ -61,7 +61,8 @@ form input {
 input[type=text],
 input[type=number] {
     height: 1em;
-    padding: 1em;
+    padding: 10px;
+    font-size: 20px;
 }
 
 input[type=submit] {
@@ -69,6 +70,12 @@ input[type=submit] {
     
     font-weight: 700;
     border: 1px solid grey;
+    background-color: white;
+}
+
+input[type=submit]:hover{
+    background-color: lightgrey;
+    cursor: pointer;
 }
 
 #add-book {
