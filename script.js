@@ -37,7 +37,6 @@ submitForm.addEventListener("submit", (e) =>{
     
     document.getElementById("form").className ="form-hidden";
     document.getElementById("form").reset();
-
 } )
 
 function addBookToLibrary(title, author, pages, read) {
