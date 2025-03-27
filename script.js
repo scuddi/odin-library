@@ -33,7 +33,7 @@ submitForm.addEventListener("submit", (e) =>{
     newBook.id = crypto.randomUUID();
     myLibrary.push(newBook);
 
-    displayBooks();
+    // displayBooks(); //PROBLEM: Bestehende Bücher werden dann nochmal hinzugefügt
     
     document.getElementById("form").className ="form-hidden";
 
