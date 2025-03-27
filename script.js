@@ -1,5 +1,9 @@
+// Queryselector for Document Elements
+
 const buttonExpandForm = document.querySelector("#expand-form");
 const buttonSubmitForm = document.querySelector("#submit");
+
+// Library Functionalities
 
 function Book(title, author, pages, read) {
     this.id = crypto.randomUUID();
