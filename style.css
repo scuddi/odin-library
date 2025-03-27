@@ -43,8 +43,15 @@ a img {
     gap: 2em;
 }
 
-.form-area form {
+.form-hidden {
+    display: none;
+}
+
+.form-expanded {
     font-size: 20px;
+    background: lightgrey;
+    border-radius: 15px;
+    padding: 1em;
 }
 
 form label {
@@ -63,6 +70,12 @@ input[type=number] {
     height: 1em;
     padding: 10px;
     font-size: 20px;
+}
+
+input[type=checkbox] {
+    width: 18px;
+    height: 18px;
+
 }
 
 input[type=submit] {

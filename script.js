@@ -1,3 +1,5 @@
+const buttonExpandForm = document.querySelector("#add-book");
+
 function Book(title, author, pages, read) {
     this.id = crypto.randomUUID();
     this.title = title;
@@ -7,6 +9,10 @@ function Book(title, author, pages, read) {
 };
 
 const myLibrary = [];
+
+function expandForm() {
+    document.getElementById("form").className = "form-expanded";
+};
 
 function addBookToLibrary(title, author, pages, read) {
     const newBook = new Book(title, author, pages, read);
@@ -53,3 +59,5 @@ addBookToLibrary("The Abolition of Man", "C. S. Lewis", 48, "not read");
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, "not read");
 
 displayBooks(myLibrary);
+
+buttonExpandForm.addEventListener("click", expandForm);
