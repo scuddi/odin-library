@@ -43,6 +43,34 @@ a img {
     gap: 2em;
 }
 
+.form-area form {
+    font-size: 20px;
+}
+
+form label {
+    margin-right: 8px;
+    font-weight: 700;
+}
+
+form input {
+    margin-right: 3em;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type=text],
+input[type=number] {
+    height: 1em;
+    padding: 1em;
+}
+
+input[type=submit] {
+    padding: 1em;
+    
+    font-weight: 700;
+    border: 1px solid grey;
+}
+
 #add-book {
     font-size: 28px;
     font-family: Arial, Helvetica, sans-serif;

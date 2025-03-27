@@ -15,14 +15,15 @@
     <section class="form-area">
         <button id="add-book">Add new book</button>
         <form>
-            <label for="title">Title</label>
+            <label for="title">Title:</label>
             <input type="text" name="title">
-            <label for="author">Author</label>
+            <label for="author">Author:</label>
             <input type="text" name="author">
-            <label for="pages">Pages</label>
-            <input type="number" name="pages">
-            <label for="status">Status</label>
+            <label for="pages">Pages:</label>
+            <input type="number" name="pages" min="0">
+            <label for="status">Status:</label>
             <input type="checkbox" name="status">
+            <input type="submit" Value="Buch hinzufügen">
         </form>
     </section>
     <section class="content" id="content">
