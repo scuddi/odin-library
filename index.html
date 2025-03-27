@@ -12,20 +12,24 @@
         <div>Welcome to your personal library</div>
         <a href="https://github.com/scuddi/odin-library" target="_blank"><img src="images/github.svg" alt="GitHub Logo"></a>
     </header>
-    <section class="content">
-        <div class="book-card">
-            <div class="book-title">Title</div>
-            <div class="book-author">Author</div>
-            <div class="book-pages">Pages</div>
-            <div class="book-read">Read</div>
-        </div>
-        <div class="book-card">
-            <div class="book-title">Title</div>
-            <div class="book-author">Author</div>
-            <div class="book-pages">Pages</div>
-            <div class="book-read">Read</div>
-        </div>
+    <section class="form-area">
+        <button id="expand-form">Add new book</button>
+        <form class="form-hidden" id="form">
+            <label for="title">Title:</label>
+            <input type="text" name="title" required id="form-title">
+            <label for="author">Author:</label>
+            <input type="text" name="author" required id="form-author">
+            <label for="pages">Pages:</label>
+            <input type="number" name="pages" min="0" required id="form-pages">
+            <label for="status">Status:</label>
+            <input type="checkbox" name="status" required id="form-status">
+            <input id="submit" type="submit" Value="Add book">
+        </form>
     </section>
+    <section class="content" id="content">
+
+    </section>
+
 
     <script src="script.js"></script>
 </body>
