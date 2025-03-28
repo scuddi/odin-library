@@ -29,6 +29,16 @@ submitForm.addEventListener("submit", (e) =>{
     let pages = document.getElementById("form-pages").value;
     let read = document.getElementById("form-status").checked;
 
+    // Function to transform booleans of read status to strings
+
+    if (read === true) {
+        read = "read";
+    } else {
+        read = "not read";
+    };
+
+    // Add book to existing library
+
     const newBook = new Book(title, author, pages, read);
     newBook.id = crypto.randomUUID();
     myLibrary.push(newBook);
@@ -37,7 +47,7 @@ submitForm.addEventListener("submit", (e) =>{
     
     document.getElementById("form").className ="form-hidden";
     document.getElementById("form").reset();
-} )
+});
 
 function addBookToLibrary(title, author, pages, read) {
 
