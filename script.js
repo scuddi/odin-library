@@ -27,13 +27,13 @@ submitForm.addEventListener("submit", (e) =>{
     let title = document.getElementById("form-title").value;
     let author = document.getElementById("form-author").value;
     let pages = document.getElementById("form-pages").value;
-    let read = document.getElementById("form-status").value;
-    
+    let read = document.getElementById("form-status").checked;
+
     const newBook = new Book(title, author, pages, read);
     newBook.id = crypto.randomUUID();
     myLibrary.push(newBook);
 
-    displayBooks(); //PROBLEM: Bestehende Bücher werden dann nochmal hinzugefügt
+    displayBooks();
     
     document.getElementById("form").className ="form-hidden";
     document.getElementById("form").reset();
@@ -58,19 +58,19 @@ function displayBooks() {
         bookCard.classList.add("book-card");
 
         
-        titleDiv = document.createElement("div");
+        let titleDiv = document.createElement("div");
         titleDiv.classList.add("book-title");
         titleDiv.innerHTML = `"${myLibrary[i].title}"`;
 
-        authorDiv = document.createElement("div");
+        let authorDiv = document.createElement("div");
         authorDiv.classList.add("book-author");
         authorDiv.innerHTML = `Author: ${myLibrary[i].author}`;
         
-        pagesDiv = document.createElement("div");
+        let pagesDiv = document.createElement("div");
         pagesDiv.classList.add("book-pages");
         pagesDiv.innerHTML = `Pages: ${myLibrary[i].pages}`;
         
-        readDiv = document.createElement("div");
+        let readDiv = document.createElement("div");
         readDiv.classList.add("book-read");
         readDiv.innerHTML = `Status: ${myLibrary[i].read}`;
 
