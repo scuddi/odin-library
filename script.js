@@ -96,9 +96,7 @@ function displayBooks() {
     };
 };
 
-// function removeButton () {
-    
-// };
+
 
 addBookToLibrary("The Phoenix Project", "Gene Kim", 345, "read");
 addBookToLibrary("The Abolition of Man", "C. S. Lewis", 48, "not read");
