@@ -84,7 +84,18 @@ function displayBooks() {
         
         let readDiv = document.createElement("div");
         readDiv.classList.add("book-read");
-        readDiv.innerHTML = `Status: ${myLibrary[i].read}`;
+        let readDivText= document.createElement("div");
+        readDivText.classList.add("book-read-text");
+        readDivText.innerHTML = "Read: ";
+        let readDivInput = document.createElement("input");
+        readDivInput.classList.add("tgl");
+        readDivInput.id = "toggle";
+        readDivInput.setAttribute("type", "checkbox");
+        let readDivLabel = document.createElement("label");
+        readDivLabel.classList.add("tgl-btn");
+        readDivLabel.setAttribute("for", "toggle");
+
+        readDiv.append(readDivText, readDivInput, readDivLabel);
 
         let removeButton = document.createElement("button");
         removeButton.classList.add("remove-book");
@@ -93,6 +104,7 @@ function displayBooks() {
 
         content.appendChild(bookCard);
         bookCard.append(titleDiv, authorDiv, pagesDiv, readDiv, removeButton);
+
     };
 };
 
