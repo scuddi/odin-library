@@ -158,3 +158,20 @@ input[type=submit]:hover{
     justify-self: center;
     font-size: 18px;
 }
+
+.remove-book {
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    background-color: rgb(186, 15, 15);
+    border: 2px solid rgb(142, 13, 13);;
+    border-radius: 45%;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+}
+
+.remove-book:hover {
+    cursor: pointer;
+    background-color: rgb(240, 1, 1);
+}

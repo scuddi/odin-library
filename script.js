@@ -60,7 +60,9 @@ function addBookToLibrary(title, author, pages, read) {
 
 function displayBooks() {
     content = document.getElementById("content");
-    content.innerHTML = "";
+
+    // Outcommented for testing 
+    // content.innerHTML = "";
 
     for (let i = 0; i < myLibrary.length; i++) {
 
