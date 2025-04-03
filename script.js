@@ -60,7 +60,9 @@ function addBookToLibrary(title, author, pages, read) {
 
 function displayBooks() {
     content = document.getElementById("content");
-    content.innerHTML = "";
+
+    // Outcommented for testing 
+    // content.innerHTML = "";
 
     for (let i = 0; i < myLibrary.length; i++) {
 
@@ -84,11 +86,19 @@ function displayBooks() {
         readDiv.classList.add("book-read");
         readDiv.innerHTML = `Status: ${myLibrary[i].read}`;
 
+        let removeButton = document.createElement("button");
+        removeButton.classList.add("remove-book");
+        removeButton.innerHTML = "X";
+        removeButton.setAttribute("onclick", "return this.parentNode.remove();")
 
         content.appendChild(bookCard);
-        bookCard.append(titleDiv, authorDiv, pagesDiv, readDiv)
+        bookCard.append(titleDiv, authorDiv, pagesDiv, readDiv, removeButton);
     };
 };
+
+// function removeButton () {
+    
+// };
 
 addBookToLibrary("The Phoenix Project", "Gene Kim", 345, "read");
 addBookToLibrary("The Abolition of Man", "C. S. Lewis", 48, "not read");
