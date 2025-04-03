@@ -89,11 +89,11 @@ function displayBooks() {
         readDivText.innerHTML = "Read: ";
         let readDivInput = document.createElement("input");
         readDivInput.classList.add("tgl");
-        readDivInput.id = "toggle";
+        readDivInput.id = myLibrary[i].id;
         readDivInput.setAttribute("type", "checkbox");
         let readDivLabel = document.createElement("label");
         readDivLabel.classList.add("tgl-btn");
-        readDivLabel.setAttribute("for", "toggle");
+        readDivLabel.setAttribute("for", myLibrary[i].id);
 
         readDiv.append(readDivText, readDivInput, readDivLabel);
 
