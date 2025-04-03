@@ -29,14 +29,6 @@ submitForm.addEventListener("submit", (e) =>{
     let pages = document.getElementById("form-pages").value;
     let read = document.getElementById("form-status").checked;
 
-    // Function to transform booleans of read status to strings
-
-    if (read === true) {
-        read = "read";
-    } else {
-        read = "not read";
-    };
-
     // Add book to existing library
 
     const newBook = new Book(title, author, pages, read);
@@ -95,6 +87,12 @@ function displayBooks() {
         readDivLabel.classList.add("tgl-btn");
         readDivLabel.setAttribute("for", myLibrary[i].id);
 
+        if (myLibrary[i].read === true) {
+            readDivInput.checked = true;
+        } else {
+            readDivInput.checked = false;
+        };
+
         readDiv.append(readDivText, readDivInput, readDivLabel);
 
         let removeButton = document.createElement("button");
@@ -110,9 +108,9 @@ function displayBooks() {
 
 
 
-addBookToLibrary("The Phoenix Project", "Gene Kim", 345, "read");
-addBookToLibrary("The Abolition of Man", "C. S. Lewis", 48, "not read");
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, "not read");
+addBookToLibrary("The Phoenix Project", "Gene Kim", 345, true);
+addBookToLibrary("The Abolition of Man", "C. S. Lewis", 48, false);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, false);
 
 displayBooks(myLibrary);
 
