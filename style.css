@@ -154,14 +154,21 @@ input[type=submit]:hover{
 .book-pages {
     justify-self: center;
     font-size: 18px;
+    padding-top: 2px;
+}
+
+.book-read-text {
+    padding-right:8px;
+    padding-top: 2px;
 }
 
 /* From UI-Verse: https://uiverse.io/elijahgummer/lovely-hound-41 */
 
-.book-read{
+.book-read {
+    display: flex;
     justify-self: center;
     font-size: 18px;
-    --blue: #0d7eff;
+    --green: #2db957;
     --g08: #e1e5eb;
     --g04: #848ea1;
     text-align: center;
@@ -254,7 +261,7 @@ display: none;
     padding-right: 0.4em;
 }
 .book-read .tgl:checked + .tgl-btn {
-    background: var(--blue);
+    background: var(--green);
 }
 .book-read .tgl:checked + .tgl-btn:active {
     box-shadow: inset 0 0 0 30px rgba(0, 0, 0, 0.1);
