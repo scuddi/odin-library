@@ -14,6 +14,9 @@
     </header>
     <section class="form-area">
         <button id="expand-form">Add new book</button>
+
+        <!--Form is hidden and gets displayed on button click above-->
+
         <form class="form-hidden" id="form">
             <label for="title">Title:</label>
             <input type="text" name="title" required id="form-title">
@@ -27,6 +30,8 @@
         </form>
     </section>
     <section class="content" id="content">
+
+        <!-- Added books are going to be displayed here. -->
         <!-- Testdaten! -->
         <div class="book-card">
             <div class="book-title">"TEST TEST TEST"</div>
@@ -38,6 +43,8 @@
                 <label class="tgl-btn" for="toggle"></label>
             </div>
             <button class="remove-book" onclick="return this.parentNode.remove();">X</button>
+        <!-- Testdaten Ende-->
+
         </div>
     </section>
 

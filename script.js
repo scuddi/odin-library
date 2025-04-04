@@ -14,11 +14,17 @@ function Book(title, author, pages, read) {
     this.read = read;
 };
 
+// Saving list for added books
+
 const myLibrary = [];
+
+// Expand form to add books
 
 function expandForm() {
     document.getElementById("form").className = "form-expanded";
 };
+
+// Add a book with the form
 
 submitForm.addEventListener("submit", (e) =>{
 
@@ -41,6 +47,8 @@ submitForm.addEventListener("submit", (e) =>{
     document.getElementById("form").reset();
 });
 
+// Predefined books
+
 function addBookToLibrary(title, author, pages, read) {
 
     const newBook = new Book(title, author, pages, read);
@@ -49,6 +57,8 @@ function addBookToLibrary(title, author, pages, read) {
 
     document.getElementById("form").className ="form-hidden";
 };
+
+// Display books
 
 function displayBooks() {
     content = document.getElementById("content");
@@ -106,12 +116,14 @@ function displayBooks() {
     };
 };
 
-
+// Predefined books
 
 addBookToLibrary("The Phoenix Project", "Gene Kim", 345, true);
 addBookToLibrary("The Abolition of Man", "C. S. Lewis", 48, false);
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, false);
 
 displayBooks(myLibrary);
+
+// Event listeners
 
 buttonExpandForm.addEventListener("click", expandForm);
