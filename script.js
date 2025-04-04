@@ -64,7 +64,7 @@ function displayBooks() {
     content = document.getElementById("content");
 
     // Outcommented for testing and developing
-    // content.innerHTML = "";
+    content.innerHTML = "";
 
     for (let i = 0; i < myLibrary.length; i++) {
 
@@ -91,28 +91,31 @@ function displayBooks() {
         readDivText.innerHTML = "Read: ";
         let readDivInput = document.createElement("input");
         readDivInput.classList.add("tgl");
-        readDivInput.id = myLibrary[i].id;
         readDivInput.setAttribute("type", "checkbox");
+        readDivInput.id = myLibrary[i].id;
+        readDivInput.checked = myLibrary[i].read;
+
         let readDivLabel = document.createElement("label");
         readDivLabel.classList.add("tgl-btn");
         readDivLabel.setAttribute("for", myLibrary[i].id);
 
-        if (myLibrary[i].read === true) {
-            readDivInput.checked = true;
-        } else {
-            readDivInput.checked = false;
-        };
+        readDivInput.addEventListener("change", function() {
+            myLibrary[i].read = this.checked;
+        });
 
         readDiv.append(readDivText, readDivInput, readDivLabel);
 
         let removeButton = document.createElement("button");
         removeButton.classList.add("remove-book");
         removeButton.innerHTML = "X";
-        removeButton.setAttribute("onclick", "return this.parentNode.remove();")
+
+        removeButton.addEventListener("click", function() {
+            myLibrary.splice(i, 1);
+            displayBooks();
+        });
 
         content.appendChild(bookCard);
         bookCard.append(titleDiv, authorDiv, pagesDiv, readDiv, removeButton);
-
     };
 };
 
